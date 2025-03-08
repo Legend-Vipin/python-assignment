@@ -1,8 +1,6 @@
-# python-assignment
-These are all Question for bassic python. 
-python 3.12.8 use in the all codes
 # Python Assignment
-
+These are all Question for bassic python. 
+python 3.12.8 use in the all codes.
 This repository contains assignments and projects related to Python programming. The assignments cover various topics and are designed to help improve your Python coding skills.
 
 ## Table of Contents
@@ -45,4 +43,6 @@ You need to have Python installed on your machine. You can download it from [Pyt
 You can run the Python scripts to execute the assignments. For example:
 ```bash
 python script_name.py
-text ai generated*
+```
+
+*This README file was generated with the assistance of AI.*

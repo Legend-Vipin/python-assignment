@@ -6,8 +6,26 @@ This file covers:
 3. Operations on Collections (Looping, Accessing, Sorting, Merging, Binary Search Intro)
 """
 
-from part1_class_anatomy import Car
-from part2_collections import car_list
+import importlib.util
+import sys
+from pathlib import Path
+
+# Load the class_anatomy and collections modules
+module_path_1 = Path(__file__).parent / "15_class_anatomy.py"
+spec1 = importlib.util.spec_from_file_location("class_anatomy", module_path_1)
+class_anatomy = importlib.util.module_from_spec(spec1)
+sys.modules["class_anatomy"] = class_anatomy
+spec1.loader.exec_module(class_anatomy)
+
+module_path_2 = Path(__file__).parent / "16_collections.py"
+spec2 = importlib.util.spec_from_file_location("collections_module", module_path_2)
+collections_module = importlib.util.module_from_spec(spec2)
+sys.modules["collections_module"] = collections_module
+spec2.loader.exec_module(collections_module)
+
+# Import needed objects
+Car = class_anatomy.Car
+car_list = collections_module.car_list
 
 #==============================================================================
 # Part 3: Operations on Collections of Objects

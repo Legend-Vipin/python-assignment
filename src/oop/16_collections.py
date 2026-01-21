@@ -6,7 +6,23 @@ This file covers:
 2. Working with Collections (list, tuple, set, dict) of Objects
 """
 
-from part1_class_anatomy import Car, car1, car2, car3, car4
+import importlib.util
+import sys
+from pathlib import Path
+
+# Load the class_anatomy module
+module_path = Path(__file__).parent / "15_class_anatomy.py"
+spec = importlib.util.spec_from_file_location("class_anatomy", module_path)
+class_anatomy = importlib.util.module_from_spec(spec)
+sys.modules["class_anatomy"] = class_anatomy
+spec.loader.exec_module(class_anatomy)
+
+# Import needed objects
+Car = class_anatomy.Car
+car1 = class_anatomy.car1
+car2 = class_anatomy.car2
+car3 = class_anatomy.car3
+car4 = class_anatomy.car4
 
 #==============================================================================
 # Part 2: Collections of Objects (List, Tuple, Set, Dict)

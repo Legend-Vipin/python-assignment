@@ -28,5 +28,7 @@ def string_functions():
     print("String after checking if it is containing 'Kumar': ", "Kumar" in string)
     print("String after checking if it is containing 'Vipin': ", "Vipin" not in string)
     print("String after checking if it is containing 'Kumar': ", "Kumar" not in string)
-    print("String after checking if it is containing 'Vipin': ", string.find("Vipin"))
-string_functions()
+    print("String after checking if it is containing 'Kumar': ", string.find("Kumar"))
+
+if __name__ == "__main__":
+    string_functions()

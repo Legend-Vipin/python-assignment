@@ -4,5 +4,7 @@ def factorial(n):
         return 1
     else:
         return n*factorial(n-1)
-n=int(input("Enter the number: "))
-print("The factorial of",n,"is",factorial(n))
+
+if __name__ == "__main__":
+    n=int(input("Enter the number: "))
+    print(f"The factorial of {n} is: {factorial(n)}")
